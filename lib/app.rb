@@ -18,11 +18,9 @@ class Selection < Sinatra::Base
   end
 
   get '/vscomp/result' do
-    @Player_name = session[:Player_name]
-    @Playerselection = session[:Playerselection]
-    @computer = ComputerSelection.new
+    @Player_name, @Playerselection  = session[:Player_name], session[:Playerselection]
+    @computer, @game1 = ComputerSelection.new, Game.new(@Playerselection, @comp_selection, @Player_name)
     @comp_selection = @computer.random_selection
-    @game1 = Game.new(@Playerselection, @comp_selection, @Player_name)
     @game1.result
     @computer = @game1.player2_name
     erb(:names_and_player_select)
@@ -59,10 +57,8 @@ class Selection < Sinatra::Base
 
   post '/result' do
     session[:Player2_selection] = params[:Player2selection]
-    @Player1_name = session[:Player1_name]
-    @Player2_name = session[:Player2_name]
-    @Player1_selection = session[:Player1_selection]
-    @Player2_selection = session[:Player2_selection]
+    @Player1_name, @Player2_name = session[:Player1_name], session[:Player2_name]
+    @Player1_selection, @Player2_selection = session[:Player1_selection], session[:Player2_selection]
     @game2 = Game.new(@Player1_selection, @Player2_selection, @Player1_name, @Player2_name)
     @game2.result
     erb(:result)
