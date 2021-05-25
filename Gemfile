@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'sinatra'
+gem 'bundler'
 
 group :test do
   gem 'capybara'
