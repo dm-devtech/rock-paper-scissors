@@ -1,5 +1,6 @@
 /**/.DS_Store
 /coverage
+/vendor
 
 # Local cache of Rubocop remote config
 .rubocop-*
