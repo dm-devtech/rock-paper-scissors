@@ -1,3 +1,7 @@
+https://travis-ci.com/dm-devtech/rock-paper-scissors.svg?branch=main
+
+[![Build Status](https://travis-ci.com/dm-devtech/rock-paper-scissors.svg?branch=main)](https://travis-ci.com/dm-devtech/rock-paper-scissors)
+
 Instructions:
 - In the terminal change directory to the rps-challenge folder
 - Run the command 'rackup' to run a local server
