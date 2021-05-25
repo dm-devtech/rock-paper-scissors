@@ -1,5 +1,5 @@
 current directory: C:/Users/DM/Course/rps-challenge/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
-C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210525-15332-1wcxwu7.rb extconf.rb
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210525-19588-kzr26o.rb extconf.rb
 checking for rb_ary_subseq()... yes
 creating Makefile
 
@@ -14,4 +14,4 @@ linking shared-object racc/cparse.so
 
 current directory: C:/Users/DM/Course/rps-challenge/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 cparse.so ./.gem.20210525-15332-1ya4rmt/racc
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20210525-19588-1wc5fd5/racc

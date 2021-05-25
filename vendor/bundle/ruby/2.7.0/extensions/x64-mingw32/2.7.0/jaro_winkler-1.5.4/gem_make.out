@@ -1,5 +1,5 @@
 current directory: C:/Users/DM/Course/rps-challenge/vendor/bundle/ruby/2.7.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
-C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210525-15332-q0i2i3.rb extconf.rb
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210525-19588-54op0v.rb extconf.rb
 creating Makefile
 
 current directory: C:/Users/DM/Course/rps-challenge/vendor/bundle/ruby/2.7.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
@@ -16,4 +16,4 @@ linking shared-object jaro_winkler/jaro_winkler_ext.so
 
 current directory: C:/Users/DM/Course/rps-challenge/vendor/bundle/ruby/2.7.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 jaro_winkler_ext.so ./.gem.20210525-15332-898sis/jaro_winkler
+/usr/bin/install -c -m 0755 jaro_winkler_ext.so ./.gem.20210525-19588-1y096gu/jaro_winkler
