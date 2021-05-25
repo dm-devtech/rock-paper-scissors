@@ -1,2 +1,2 @@
 ---
-BUNDLE_DEPLOYMENT: "false"
+BUNDLE_PATH: "vendor/bundle"
