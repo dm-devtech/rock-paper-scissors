@@ -6,19 +6,19 @@ Capybara.app = Selection
 
 feature "Homepage title and instructions show" do
   scenario "Title shows" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     expect(page).to have_content "Rock, Paper, Scissors game."
   end
 
   scenario "Instructions shows" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     expect(page).to have_text("Please enter your names.")
   end
 end
 
 feature "Players names appear" do
   scenario "Player 1 and 2 enter names" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -29,7 +29,7 @@ end
 feature "Players select option" do
 
   scenario "select rock/paper/scissors" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -42,7 +42,7 @@ end
 feature "testing game functionality" do
 
   scenario "player two selects paper and beats player 1" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -57,7 +57,7 @@ end
 feature "testing game functionality" do
 
   scenario "player two selects paper and beats player 1" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -67,7 +67,7 @@ end
 
 feature "testing game functionality" do
   scenario "player two selects paper and beats player 1" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -81,7 +81,7 @@ end
 
 feature "testing game functionality" do
   scenario "player two selects paper and beats player 1" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -96,7 +96,7 @@ end
 feature "Results page shows" do
 
   scenario "Title shows" do
-    visit("/playervsplayer")
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -107,8 +107,8 @@ feature "Results page shows" do
     expect(page).to have_content "The result:"
   end
 
-  scenario "Title shows" do
-    visit("/playervsplayer")
+  scenario "Sub title shows" do
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"
@@ -119,8 +119,8 @@ feature "Results page shows" do
     expect(page).to have_content "Each player selected:"
   end
 
-  scenario "Title shows" do
-    visit("/playervsplayer")
+  scenario "Win message shows" do
+    visit("/pvp/new")
     fill_in :Player1_name, with: "Tom"
     fill_in :Player2_name, with: "Ben"
     click_button "Submit"

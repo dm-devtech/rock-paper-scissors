@@ -7,17 +7,17 @@ class Selection < Sinatra::Base
   enable :sessions
   attr_reader :game
 
-  get '/playervscomp' do
+  get '/vscomp/new' do
     erb(:index_vs_comp)
   end
 
-  post '/playervscompresult' do
+  post '/vscomp/' do
     session[:Playerselection] = params[:Playerselection]
-      session[:Player_name] = params[:Player_name]
-      redirect '/vscompresult'
+    session[:Player_name] = params[:Player_name]
+    redirect '/vscomp/result'
   end
 
-  get '/vscompresult' do
+  get '/vscomp/result' do
     @Player_name = session[:Player_name]
     @Playerselection = session[:Playerselection]
     @computer = ComputerSelection.new
@@ -28,11 +28,11 @@ class Selection < Sinatra::Base
     erb(:names_and_player_select)
   end
 
-  get '/playervsplayer' do
+  get '/pvp/new' do
     erb(:index)
   end
 
-  post '/names' do
+  post '/pvp' do
     session[:Player1_name] = params[:Player1_name]
     session[:Player2_name] = params[:Player2_name]
     redirect '/first_turn'
