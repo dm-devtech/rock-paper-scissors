@@ -33,29 +33,29 @@ class Selection < Sinatra::Base
   post '/pvp' do
     session[:Player1_name] = params[:Player1_name]
     session[:Player2_name] = params[:Player2_name]
-    redirect '/first_turn'
+    redirect '/pvp/names'
   end
 
-  get '/first_turn' do
+  get '/pvp/names' do
     @Player1_name = session[:Player1_name]
     @Player2_name = session[:Player2_name]
     erb(:names_and_player1_select)
   end
 
-  post '/player2select' do
+  post '/pvp/turn-one' do
     @Player1_name = session[:Player1_name]
     @Player2_name = session[:Player2_name]
     session[:Player1_selection] = params[:Player1selection]
-    redirect '/second_turn'
+    redirect '/pvp/turn-two'
   end
 
-  get '/second_turn' do
+  get '/pvp/turn-two' do
     @Player1_name = session[:Player1_name]
     @Player2_name = session[:Player2_name]
     erb(:Player2_select)
   end
 
-  post '/result' do
+  post '/pvp/result' do
     session[:Player2_selection] = params[:Player2selection]
     @Player1_name, @Player2_name = session[:Player1_name], session[:Player2_name]
     @Player1_selection, @Player2_selection = session[:Player1_selection], session[:Player2_selection]
