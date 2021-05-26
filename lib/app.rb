@@ -8,7 +8,7 @@ class Selection < Sinatra::Base
   attr_reader :game
 
   get '/vscomp/new' do
-    erb(:index_vs_comp)
+    erb(:vs_comp_index)
   end
 
   post '/vscomp/' do
@@ -23,11 +23,11 @@ class Selection < Sinatra::Base
     @comp_selection = @computer.random_selection
     @game1.result
     @computer = @game1.player2_name
-    erb(:names_and_player_select)
+    erb(:vs_comp_player_select)
   end
 
   get '/pvp/new' do
-    erb(:index)
+    erb(:pvp_index)
   end
 
   post '/pvp' do
@@ -39,7 +39,7 @@ class Selection < Sinatra::Base
   get '/pvp/names' do
     @Player1_name = session[:Player1_name]
     @Player2_name = session[:Player2_name]
-    erb(:names_and_player1_select)
+    erb(:pvp_player1_select)
   end
 
   post '/pvp/turn-one' do
@@ -52,7 +52,7 @@ class Selection < Sinatra::Base
   get '/pvp/turn-two' do
     @Player1_name = session[:Player1_name]
     @Player2_name = session[:Player2_name]
-    erb(:Player2_select)
+    erb(:pvp_player2_select)
   end
 
   post '/pvp/result' do
@@ -61,7 +61,7 @@ class Selection < Sinatra::Base
     @Player1_selection, @Player2_selection = session[:Player1_selection], session[:Player2_selection]
     @game2 = Game.new(@Player1_selection, @Player2_selection, @Player1_name, @Player2_name)
     @game2.result
-    erb(:result)
+    erb(:pvp_result)
   end
 
 end
