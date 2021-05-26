@@ -19,10 +19,11 @@ class Selection < Sinatra::Base
 
   get '/vscomp/result' do
     @Player_name, @Playerselection  = session[:Player_name], session[:Playerselection]
-    @computer, @game1 = ComputerSelection.new, Game.new(@Playerselection, @comp_selection, @Player_name)
+    @computer = ComputerSelection.new
     @comp_selection = @computer.random_selection
-    @game1.result
+    @game1 = Game.new(@Playerselection, @comp_selection, @Player_name)
     @computer = @game1.player2_name
+    @game1.result
     erb(:vs_comp_player_selection)
   end
 

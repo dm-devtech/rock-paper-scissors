@@ -1,11 +1,18 @@
-<h1>Welcome <%=@Player_name%> </h1>
+<body style="font-family:verdana" bgcolor="lightblue" >
+  <center>
+    <h1>Welcome <%=@Player_name%> </h1>
 
-<div>
-  You selected <%=@Playerselection%>.
-</div>
+      <div>
+        You selected <%=@Playerselection%>.
+      </div>
 
-<div>
-<%=@computer%> selected <%=@comp_selection%>.
-</div>
+      <div>
+        <%=@computer%> selected <%=@comp_selection%>
+      </div>
 
-<h2><%=@game1.result%></h2>
+      <div style="font-family:verdana" bgcolor="lightblue">
+        <b><%=@game1.result%></b>
+      </div>
+  </center>
+
+</body>
