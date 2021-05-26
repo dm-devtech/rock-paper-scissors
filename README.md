@@ -8,7 +8,7 @@
 - To play rock, paper, scissors against the computer go to your web browser and load the page: http://localhost:9292/vscomp/new
 
 - To play against a friend go to this page in your web browser:
-http://localhost:9292/vsplayer/new
+http://localhost:9292/pvp/new
 
 #### Versus a computer:
 - Enter your name and make a Selection
