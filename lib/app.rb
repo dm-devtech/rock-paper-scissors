@@ -23,7 +23,7 @@ class Selection < Sinatra::Base
     @comp_selection = @computer.random_selection
     @game1.result
     @computer = @game1.player2_name
-    erb(:vs_comp_player_select)
+    erb(:vs_comp_player_selection)
   end
 
   get '/pvp/new' do
