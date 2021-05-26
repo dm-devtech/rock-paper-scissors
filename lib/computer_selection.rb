@@ -7,13 +7,9 @@ class ComputerSelection
 
   def random_selection
     random_number = rand(3)
-    if random_number.zero?
-      "Scissors"
-    elsif random_number == 1
-      "Rock"
-    elsif random_number == 2
-      "Paper"
-    end
+    return "Scissors" if random_number.zero?
+    return "Rock" if random_number == 1
+    return "Paper" if random_number == 2
   end
 
 end

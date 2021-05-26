@@ -9,20 +9,12 @@ class Game
   end
 
   def result
-    if @player1_turn == "Rock" && @player2_turn == "Paper"
-      "#{@player2_name} wins"
-    elsif @player1_turn == "Paper" && @player2_turn == "Scissors"
-      "#{@player2_name} wins"
-    elsif @player1_turn == "Scissors" && @player2_turn == "Rock"
-      "#{@player2_name} wins"
-    elsif @player2_turn == "Rock" && @player1_turn == "Paper"
-      "#{@player1_name} wins"
-    elsif @player2_turn == "Paper" && @player1_turn == "Scissors"
-      "#{@player1_name} wins"
-    elsif @player2_turn == "Scissors" && @player1_turn == "Rock"
-      "#{@player1_name} wins"
-    elsif @player1_turn == @player2_turn
-      "It is a Draw!"
-    end
+    return "#{@player2_name} wins" if @player1_turn == "Rock" && @player2_turn == "Paper"
+    return "#{@player2_name} wins" if @player1_turn == "Paper" && @player2_turn == "Scissors"
+    return "#{@player2_name} wins" if @player1_turn == "Scissors" && @player2_turn == "Rock"
+    return "#{@player1_name} wins" if @player2_turn == "Rock" && @player1_turn == "Paper"
+    return "#{@player1_name} wins" if @player2_turn == "Paper" && @player1_turn == "Scissors"
+    return "#{@player1_name} wins" if @player2_turn == "Scissors" && @player1_turn == "Rock"
+    return "It is a Draw!" if @player1_turn == @player2_turn
   end
 end
