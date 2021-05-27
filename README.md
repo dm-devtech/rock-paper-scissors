@@ -17,7 +17,7 @@
 
 #### Player vs Player:
 - Enter your names
-![pvp](/screenshots/vscomp.JPG)
+![pvp](/screenshots/pvp.JPG)
 - Player 1 goes first and makes a selection (the other player should look away) and submit their selection
 - Then Player 2 enters a selection.
 - The results then show
